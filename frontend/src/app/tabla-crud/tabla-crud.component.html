@@ -51,24 +51,22 @@
                     <th scope="col"><i class="fas fa-map-marker-alt"></i>&nbsp;Imagen</th>
                   </tr>
                   </thead>
-                  <!--<tbody>
-                  <tr>
-                    <td>{{equipo.cliente}}</td>
-                    <td>{{equipo.equipo}}</td>
-                    <td>{{equipo.tipo}}</td>
-                    <td>{{equipo.modelo}}</td>
-                    <td>{{equipo.serie}}</td>
-                    <td>{{equipo.direccion}}</td>
-                    <td>{{equipo.agencia}}</td>
-                    <td>{{equipo.estado}}</td>
+                  <tbody>
+                  <tr *ngFor="let product of products">
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.type}}</td>
+                    <td>{{product.size}}</td>
+                    <td>{{product.image}}</td>
                     <td>
                       <div class="row">
                         <div class="mx-auto">
-                          <button type="button" class="btn btn-warning btn-sm" (click)="goToUpdateEquipment(equipo.key)">
+                          <button type="button" class="btn btn-warning btn-sm">
                             <i
                               class="fas fa-pencil-alt"></i> Editar
                           </button>&nbsp;
-                          <button type="button" class="btn btn-danger btn-sm" (click)="deleteEquipment(equipo.key)">
+                          <button type="button" class="btn btn-danger btn-sm">
                             <i
                               class="fas fa-trash"></i>
                             Eliminar
@@ -77,7 +75,7 @@
                       </div>
                     </td>
                   </tr>
-                  </tbody>-->
+                  </tbody>
                 </table>
               </div>
             </div>
