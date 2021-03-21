@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateProductComponent } from './create-product/create-product.component';
 import { HomeComponent } from './home/home.component';
 import { TablaCrudComponent } from './tabla-crud/tabla-crud.component';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'tablacrud',
     component: TablaCrudComponent
+  },
+  {
+    path: 'create',
+    component: CreateProductComponent
   }
 ];
 

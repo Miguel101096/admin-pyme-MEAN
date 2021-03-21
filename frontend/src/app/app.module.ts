@@ -8,7 +8,7 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { FooterComponent } from './footer/footer.component';
 import { TablaCrudComponent } from './tabla-crud/tabla-crud.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -27,6 +27,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
