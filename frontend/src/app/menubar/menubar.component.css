@@ -1,0 +1,27 @@
+.top-nav-collapse {
+  background-color: #72726f !important;
+}
+
+.navbarother:not(.top-nav-collapse) {
+  background: #72726f !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #72726f !important;
+  }
+}
+
+.rgba-gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7),
+    #72726f 100%
+  );
+
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.7),
+    #72726f 100%
+  );
+}

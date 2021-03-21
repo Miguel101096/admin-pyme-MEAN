@@ -1,0 +1,92 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-md mx-auto">
+        <div class="card shadow-sm">
+          <div class="card-header font-weight-bold text-center text-white" style="background: #573916d7;">
+            Inventario de Productos
+          </div>
+          <!-- Area de Busqueda -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-4 mb-2 pr-lg-1">
+                    <select id="selectID" class="custom-select">
+                      <option value="0" selected disabled>Tipo de Busqueda</option>
+                      <option value="0">Nombre</option>
+                      <option value="1">Descripción</option>
+                      <option value="2">Precio</option>
+                      <option value="3">Tipo</option>
+                      <option value="4">Tamaño</option>
+                      <option value="5">Imagen</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-2 pl-lg-0">
+                    <input type="text" class="form-control" id="buscarID" placeholder="Buscar"
+                           >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="float-right">
+                  <button id="btnNuevo" type="button" class="btn btn-outline-success"
+                          [routerLink]="['/equipos', 'nuevo']"><i
+                    class="fas fa-plus-circle"></i> Nuevo
+                  </button>&nbsp;
+                  <button id="btnDescargar" type="button" class="btn btn-outline-info"><i
+                    class="fas fa-file-download"></i> Descargar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <!--Tabla de articulos-->
+            <div class="row">
+              <div class="col-md table-responsive">
+                <table id="myTable" class="table text-center">
+                  <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"><i class="far fa-card"></i>&nbsp;Nombre</th>
+                    <th scope="col"><i class="fas fa-laptop-code"></i>&nbsp;Descripción</th>
+                    <th scope="col"><i class="fas fa-network-wired"></i>&nbsp;Precio</th>
+                    <th scope="col"><i class="fas fa-server"></i>&nbsp;Tipo</th>
+                    <th scope="col"><i class="fas fa-stream"></i>&nbsp;Tamaño</th>
+                    <th scope="col"><i class="fas fa-map-marker-alt"></i>&nbsp;Imagen</th>
+                  </tr>
+                  </thead>
+                  <!--<tbody>
+                  <tr>
+                    <td>{{equipo.cliente}}</td>
+                    <td>{{equipo.equipo}}</td>
+                    <td>{{equipo.tipo}}</td>
+                    <td>{{equipo.modelo}}</td>
+                    <td>{{equipo.serie}}</td>
+                    <td>{{equipo.direccion}}</td>
+                    <td>{{equipo.agencia}}</td>
+                    <td>{{equipo.estado}}</td>
+                    <td>
+                      <div class="row">
+                        <div class="mx-auto">
+                          <button type="button" class="btn btn-warning btn-sm" (click)="goToUpdateEquipment(equipo.key)">
+                            <i
+                              class="fas fa-pencil-alt"></i> Editar
+                          </button>&nbsp;
+                          <button type="button" class="btn btn-danger btn-sm" (click)="deleteEquipment(equipo.key)">
+                            <i
+                              class="fas fa-trash"></i>
+                            Eliminar
+                          </button>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>-->
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
