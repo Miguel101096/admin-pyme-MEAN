@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Miguel101096/admin-pyme-MEAN/issues"
   },
-  "homepage": "https://github.com/Miguel101096/admin-pyme-MEAN#readme"
+  "homepage": "https://github.com/Miguel101096/admin-pyme-MEAN#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
