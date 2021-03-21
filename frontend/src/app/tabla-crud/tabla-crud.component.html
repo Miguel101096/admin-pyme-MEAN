@@ -60,19 +60,7 @@
                     <td>{{product.size}}</td>
                     <td>{{product.image}}</td>
                     <td>
-                      <div class="row">
-                        <div class="mx-auto">
-                          <button type="button" class="btn btn-warning btn-sm">
-                            <i
-                              class="fas fa-pencil-alt"></i> Editar
-                          </button>&nbsp;
-                          <button type="button" class="btn btn-danger btn-sm">
-                            <i
-                              class="fas fa-trash"></i>
-                            Eliminar
-                          </button>
-                        </div>
-                      </div>
+                      <button type="button" class="btn btn-success btn-sm" [routerLink]="['/', product._id]">Seleccionar</button>
                     </td>
                   </tr>
                   </tbody>
