@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailComponent } from './detail/detail.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetailComponent } from './detail/detail.component';
     TablaCrudComponent,
     CreateProductComponent,
     ContactComponent,
-    DetailComponent
+    DetailComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

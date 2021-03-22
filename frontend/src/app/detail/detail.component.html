@@ -10,7 +10,7 @@
         />
       </div>
     </div>
-    <div class="col-sm" style="text-align: center">
+    <div class="col-sm">
       <div class="container" *ngIf="product">
         <div>
           <h1>{{ product.name }}</h1>
@@ -37,6 +37,9 @@
           </div>
         </div>
         <div *ngIf="confirm == true">
+          <div class="alert alert-danger" role="alert">
+            ¡Está seguro de eliminar este producto!
+          </div>
           <button (click)="setConfirm(false)" class="btn btn-danger btn-sm">
             <i class="fas fa-cancel-alt"></i>
             Cancelar
