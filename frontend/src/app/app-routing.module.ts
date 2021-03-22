@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateProductComponent } from './create-product/create-product.component';
+import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
 import { TablaCrudComponent } from './tabla-crud/tabla-crud.component';
 import { ContactComponent } from './contact/contact.component';
@@ -20,7 +21,11 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent   
+  },
+  {
+    path: ':id',
+    component: DetailComponent
   }
 ];
 
