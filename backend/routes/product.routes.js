@@ -5,5 +5,5 @@ router.get('/', productCtrl.getProducts);
 router.post('/save', productCtrl.saveProduct);
 router.get('/:id?', productCtrl.getProduct);
 router.delete('/:id?', productCtrl.deleteProduct);
-router.put('/:id?', productCtrl.updateProduct);
+router.put('/update/:id?', productCtrl.updateProduct);
 module.exports = router;   
