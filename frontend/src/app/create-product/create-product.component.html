@@ -1,72 +1,83 @@
-<div class="container-fluid mt-5">
-  <div class="message success" *ngIf="status == 'success'">
-    Producto cargado exitosamente, visualice
-    <a [routerLink]="['/tablacrud']">aquí</a>.
+<div class="container py-5">
+  <h1>INGRESAR NUEVO PRODUCTO</h1>
+   <div class="row">    
+    <div class="col-md-9 ">
+      <div class="message success" *ngIf="status == 'success'">
+        Producto cargado exitosamente, visualice
+        <a [routerLink]="['/tablacrud']">aquí</a>.
+      </div>
+      <div class="message failed" *ngIf="status == 'failed'">
+        El producto no se ha podido crear.
+      </div>
+      <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+        <div class="form-group">
+          <label for="name"> <strong>Ingrese el nombre del producto</strong> </label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            #name="ngModel"
+            [(ngModel)]="product.name"
+            placeholder="Ingrese el nombre del producto. Ejemplo: ('Café americano')"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description"> <strong>Descripción</strong> </label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            #description="ngModel"
+            [(ngModel)]="product.description"
+            placeholder="Ingrese la descripción del producto"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="price"> <strong>Precio</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            name="price"
+            #price="ngModel"
+            [(ngModel)]="product.price"
+            placeholder="Ingrese el precio del producto"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="type"><strong>Tipo</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            name="type"
+            #type="ngModel"
+            [(ngModel)]="product.type"
+            placeholder="Ingrese el tipo de producto"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="size"><strong>Tamaño</strong></label>
+          <input
+            type="text"
+            class="form-control"
+            name="size"
+            #size="ngModel"
+            [(ngModel)]="product.size"
+            placeholder="Ingrese el tamaño del producto"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-success btn-block">CREAR</button>
+      </form>
+      
+    </div>
+    <hr class="clearfix w-100 d-md-none">    
+    <div class="col-md-3">
+      <img src="./assets/granos de cafe.png" width="100%"  class="align-top" alt="">         
+    </div>
   </div>
-  <div class="message failed" *ngIf="status == 'failed'">
-    El producto no se ha podido crear.
-  </div>
-  <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
-    <div class="form-group">
-      <label for="name">Ingrese el nombre del producto</label>
-      <input
-        type="text"
-        class="form-control"
-        name="name"
-        #name="ngModel"
-        [(ngModel)]="product.name"
-        placeholder="Ingrese el nombre del producto. Ejemplo: ('Café americano')"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="description">Descripción</label>
-      <input
-        type="text"
-        class="form-control"
-        name="description"
-        #description="ngModel"
-        [(ngModel)]="product.description"
-        placeholder="Ingrese la descripción del producto"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="price">Precio</label>
-      <input
-        type="text"
-        class="form-control"
-        name="price"
-        #price="ngModel"
-        [(ngModel)]="product.price"
-        placeholder="Ingrese el precio del producto"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="type">Tipo</label>
-      <input
-        type="text"
-        class="form-control"
-        name="type"
-        #type="ngModel"
-        [(ngModel)]="product.type"
-        placeholder="Ingrese el tipo de producto"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="size">Tamaño</label>
-      <input
-        type="text"
-        class="form-control"
-        name="size"
-        #size="ngModel"
-        [(ngModel)]="product.size"
-        placeholder="Ingrese el tamaño del producto"
-        required
-      />
-    </div>
-    <button type="submit" class="btn btn-light btn-block">CREAR</button>
-  </form>
+ 
 </div>
