@@ -5,6 +5,7 @@ import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
 import { TablaCrudComponent } from './tabla-crud/tabla-crud.component';
 import { ContactComponent } from './contact/contact.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: ':id',
     component: DetailComponent
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent
   }
 ];
 

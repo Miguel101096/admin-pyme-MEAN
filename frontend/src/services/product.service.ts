@@ -31,6 +31,6 @@ export class ProductService {
     updateProduct(product: any):Observable<any>{
         let params=JSON.stringify(product);
         let headers=new HttpHeaders().set('Content-Type','application/json');
-        return this._http.put(this.url+product._id,params,{headers:headers});
+        return this._http.put(this.url+'update/'+product._id,params,{headers:headers});
     }
 }

@@ -36,7 +36,8 @@
       <div class="row" *ngIf="product">
         <div *ngIf="confirm == false">
           <div class="mx-auto">
-            <button type="button" class="btn btn-warning btn-sm">
+            <button type="button" class="btn btn-warning btn-sm"
+            [routerLink]="['/edit',product._id]">
               <i class="fas fa-pencil-alt"></i> Editar</button
             >&nbsp;
             <button
