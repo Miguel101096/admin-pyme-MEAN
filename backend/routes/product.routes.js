@@ -6,4 +6,4 @@ router.post('/save', productCtrl.saveProduct);
 router.get('/:id?', productCtrl.getProduct);
 router.delete('/:id?', productCtrl.deleteProduct);
 router.put('/:id?', productCtrl.updateProduct);
-module.exports = router;
+module.exports = router;   
