@@ -6,7 +6,7 @@ import { ProductService } from 'src/services/product.service';
 
 @Component({
   selector: 'app-edit',
-  templateUrl: '../create/create.component.html',
+  templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
