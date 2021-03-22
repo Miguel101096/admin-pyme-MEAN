@@ -36,13 +36,13 @@
       <div class="row" *ngIf="product">
         <div *ngIf="confirm == false">
           <div class="mx-auto">
-            <button type="button" class="btn btn-warning btn-sm"
+            <button type="button" class="btn btn-warning btn-lg"
             [routerLink]="['/edit',product._id]">
               <i class="fas fa-pencil-alt"></i> Editar</button
             >&nbsp;
             <button
               type="button"
-              class="btn btn-danger btn-sm"
+              class="btn btn-danger btn-lg"
               (click)="setConfirm(true)"
             >
               <i class="fas fa-trash"></i>
@@ -54,12 +54,12 @@
           <div class="alert alert-danger" role="alert">
             ¡Está seguro de eliminar este producto!
           </div>
-          <button (click)="setConfirm(false)" class="btn btn-danger btn-sm">
+          <button (click)="setConfirm(false)" class="btn btn-danger btn-lg">
             <i class="fas fa-cancel-alt"></i>
             Cancelar
           </button>
           <button
-            class="btn btn-danger btn-sm"
+            class="btn btn-primary btn-lg"
             (click)="deleteProduct(product._id)"
             [routerLink]="['/tablacrud']"
           >
@@ -67,7 +67,9 @@
             Eliminar
           </button>
         </div>
+        <a class="btn btn-info"  href="tablacrud" role="button"> <i class="fas fa-undo-alt"></i> REGRESAR</a>
       </div>
     </div>
   </div>
 </div>
+<img src="./assets/botton.jpg" width="" class="align-top" width="100%">
