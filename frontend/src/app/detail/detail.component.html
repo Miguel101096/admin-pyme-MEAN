@@ -1,24 +1,37 @@
 <div class="container py-5">
   <div class="row py-5">
-    <div class="col-sm">
-      <div class="relative height-100" style="text-align: center">
+    <div class="col-sm-6">
         <img
           class="rounded-circle"
-          src="https://globalassets.starbucks.com/assets/2d52f16a22fb40ff898be1815ecc952e.jpg?impolicy=1by1_wide_1242"
-          alt="Chai Latte"
-          style="width: 400px;"
+          src="https://globalassets.starbucks.com/assets/2d52f16a22fb40ff898be1815ecc952e.jpg?impolicy=1by1_wide_1242"         
+          style="width: 350px;"
         />
-      </div>
     </div>
-    <div class="col-sm">
-      <div class="container" *ngIf="product">
-        <div>
-          <h1>{{ product.name }}</h1>
-          <h4>{{ product.description }}</h4>
-          <p><strong>Precio:</strong> {{ product.price }}</p>
-          <p><strong>Tipo:</strong>  : {{ product.type }}</p>
-          <p><strong>Tamaño:</strong> : {{ product.size }}</p>
-        </div>
+    <div class="col-sm-6" >      
+      <div class="" *ngIf="product">
+        <h1><strong>{{ product.name }}</strong></h1>
+        <table class="table">
+          
+          <tbody>
+            <tr>
+              <th scope="row">Descripción</th>
+              <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Precio</th>
+              <td>{{ product.price }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Tipo</th>
+              <td colspan="2">{{ product.type }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Tamaño</th>
+              <td colspan="2">{{ product.size }}</td>
+            </tr>
+            
+          </tbody>
+        </table>
       </div>
       <div class="row" *ngIf="product">
         <div *ngIf="confirm == false">
